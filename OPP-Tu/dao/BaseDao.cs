@@ -9,9 +9,9 @@ namespace ConsoleApp3.dao
 {
     public interface IDao
     {
-        bool insertDao(BaseIdAndName row, String name);
-        int updateDao(string name, BaseIdAndName row);
-        bool deleteDao(string name, BaseIdAndName row);
+        bool insertDao(BaseEntity row, String name);
+        int updateDao(string name, BaseEntity row);
+        bool deleteDao(string name, BaseEntity row);
         object findAllDao(string name);
         object findByIdDao(int id, string nameTable);
     }
@@ -21,7 +21,7 @@ namespace ConsoleApp3.dao
         /// @param row=choose one of three table(product, category, accessotion)
         /// @param name
         /// returns true if if successful false if not
-        public bool insertDao(BaseIdAndName row, String name)
+        public bool insertDao(BaseEntity row, String name)
         {
             try
             {
@@ -37,7 +37,7 @@ namespace ConsoleApp3.dao
         /// @param name="name"choose one of three table(product, category, acessotion)
         /// @param name="row"data from one of three table(product,category, accessotion)
         /// returns 1 if successful, else 0
-        public int updateDao(string name, BaseIdAndName row)
+        public int updateDao(string name, BaseEntity row)
         {
             Database.Instants.updateTable(name, row);
             return 0;
@@ -46,7 +46,7 @@ namespace ConsoleApp3.dao
         /// @param name="name"choose one of three table(product, category, acessotion)</param>
         /// @param name="row" location to be delete</param>
         /// returns true if successful
-        public bool deleteDao(string name, BaseIdAndName row)
+        public bool deleteDao(string name, BaseEntity row)
         {
             try
             {

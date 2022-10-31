@@ -29,22 +29,22 @@ namespace ConsoleApp3.dao
                 return data;
             }
         }
-        public void insertProductTable(BaseIdAndName row)
+        public void insertProductTable(BaseEntity row)
         {
             var product = row as Product;
             productTable.Add(product);
         }
-        public void insertAccessotionTable(BaseIdAndName row)
+        public void insertAccessotionTable(BaseEntity row)
         {
             var accessotion = row as Accessotion;
             accessionsTable.Add(accessotion);
         }
-        public void insertCategoryTable(BaseIdAndName row)
+        public void insertCategoryTable(BaseEntity row)
         {
             var category = row as Category;
             categoryTable.Add(category);
         }
-        public int insertTable(string name,BaseIdAndName row)
+        public int insertTable(string name, BaseEntity row)
         {
             if(name == PRODUCT)
             {
@@ -96,7 +96,7 @@ namespace ConsoleApp3.dao
             return accessionsTable;
         }
 
-        public int updateTable(string name,BaseIdAndName row)
+        public int updateTable(string name, BaseEntity row)
         {
             if (name == PRODUCT)
             {
@@ -133,7 +133,7 @@ namespace ConsoleApp3.dao
             }
             return 0;
         }
-        public void updateProductTable(int id, BaseIdAndName row)
+        public void updateProductTable(int id, BaseEntity row)
         {
             for (int i = 0; i < productTable.Count; i++)
             {
@@ -144,7 +144,7 @@ namespace ConsoleApp3.dao
                 }
             }
         }
-        public bool deleteTable(string name,BaseIdAndName row)
+        public bool deleteTable(string name, BaseEntity row)
         {
             if (name == PRODUCT)
             {
@@ -203,7 +203,7 @@ namespace ConsoleApp3.dao
             }
 
         }
-        public object updateTableById(int id, BaseIdAndName row)
+        public object updateTableById(int id, BaseEntity row)
         {
             var Type = row.GetType().Name;
             if (Type == "Product")

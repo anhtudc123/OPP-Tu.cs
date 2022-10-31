@@ -7,7 +7,7 @@ using ConsoleApp3.Entity;
 
 namespace ConsoleApp3
 {
-    public class Accessotion:BaseIdAndName
+    public class Accessotion: BaseEntity
     {
 
     }

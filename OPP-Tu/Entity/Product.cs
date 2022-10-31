@@ -7,7 +7,7 @@ using ConsoleApp3.Entity;
 
 namespace b4product
 {
-    public class Product:BaseIdAndName
+    public class Product: BaseEntity
     {
         public int categoryId { get; set; }
     }

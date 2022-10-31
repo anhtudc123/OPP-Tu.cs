@@ -7,7 +7,7 @@ using ConsoleApp3.Entity;
 
 namespace ConsoleApp3
 {
-    public class Category:BaseIdAndName
+    public class Category: BaseEntity
     {
 
     }

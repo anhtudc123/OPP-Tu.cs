@@ -15,7 +15,7 @@ namespace ConsoleApp3.demo
         /// @param name="nameTable" choose one of three table(product, category, acessotion)
         /// @param name="row alternative counterpart</param>
         /// returns an object in one of three table(product, category, accessotion)
-        public object findByNameDao(string name, string nameTable, BaseIdAndName row)
+        public object findByNameDao(string name, string nameTable, BaseEntity row)
         {
             if (nameTable == "product")
             {

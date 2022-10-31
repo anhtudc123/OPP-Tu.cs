@@ -28,7 +28,7 @@ namespace ConsoleApp3.demo
         {
             return Database.Instants.selectTable("category");
         }
-        public void updateTest(BaseIdAndName row)
+        public void updateTest(BaseEntity row)
         {
             Database.Instants.updateTableById(row.Id, row);
         }
